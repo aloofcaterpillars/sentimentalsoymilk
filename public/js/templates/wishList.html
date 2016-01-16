@@ -36,17 +36,18 @@
         
         <p class="glyphicon glyphicon-play-circle play-icon"></p>
         <p class="trip-name">{{trip.name}}</p>
-        <p class="trip-rating">Rating: 3.4{{trip.rating}} <!--get this rating from joey
+        <p class="trip-rating">Rating: 3.4{{trip.rating}} <!--get this rating from joey-->
         <p class="trip-duration">{{trip.duration}}</p>
-        <p class="trip-destination">{{trip.destination[0]}}, {{trip.destination[1]}}</p>
-
-
+        <p class="trip-destination">{{trip.destination[0]}}, {{trip.destination[1]}}
       </div>
-      <div>
-        <md-button class ="md-raised" ng-click="removePlaylist(trip)">Remove</md-button> 
-     </div>
+      
     </span>
 
   </div> 
+  <div>
+        <div>
+        <md-button class ="md-raised" ng-click="removePlaylist(trip)">Remove</md-button> 
+        </div>
+     </div>
 
 

@@ -38,14 +38,16 @@ angular.module('app.trip', ['app.services'])
     $scope.activities = tripObj.data.list[0];
     $scope.name = tripObj.data.name;
     $scope.area = tripObj.data.area;
-    console.log(tripObj.data)
+    $scope.playlist = tripObj.data; // creating a scope variable of the trip to be used in adddtoWishList below
+    
     console.log('scope is', $scope.area)
   });
 
   // this function adds a playlist to a users wishlist via the addItemstowishlist factory function
-  $scope.addToWishList = function (playlist) {
-    ActivitiesData.addItemstowishlist($scope.id);
-    console.log('$scope.id', $scope.id);
+  $scope.addToWishList = function () {
+
+    ActivitiesData.postToWishList($scope.playlist);
+    console.log('tripObj.data', $scope.playlist);
 
   }
   
